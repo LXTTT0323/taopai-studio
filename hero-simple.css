@@ -1,0 +1,19 @@
+.hero.hero-simple{display:flex;align-items:center;min-height:calc(100svh - 32px);padding:calc(var(--header) + 66px) 0 125px;background:#163f35;color:#f7f6f1;overflow:hidden;position:relative}
+.hero-simple h1{font-size:clamp(44px,5.8vw,80px);font-weight:600;line-height:1.3;letter-spacing:-.045em;margin:0;max-width:1200px}
+.hero-thought,.hero-made{display:block}
+.hero-thought,.hero-made{color:#f7f6f1;font-weight:600;margin:0}
+.hero-keep{white-space:nowrap}
+.hero-summary{margin:29px 0 0;max-width:780px}
+.hero-simple-promise{font-size:clamp(18px,1.8vw,24px);line-height:1.65;margin:0 0 18px;color:#f3ad91;font-weight:400}
+.hero-simple-description{font-size:17px;line-height:1.9;color:#cbd8cf;margin:0}
+.hero-simple-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin:31px 0 0}
+.hero-simple-actions .button{background:#f3ad91;color:#163f35;border-radius:99px;padding:16px 29px;font-size:15px;min-height:54px;box-shadow:none}
+.hero-simple-actions .button:hover{background:#f7ba9f;transform:translateY(-2px)}
+.hero-simple-link{font-size:14px;padding:6px 0;color:#e1e9dc;border-bottom:1px solid #aabfa177}
+.hero-simple-link:hover{border-color:#f7f6f1}
+.hero-simple>.hero-next{position:absolute;bottom:31px;left:0;right:0;padding-top:19px;border-top:1px solid #bed0b92e;font-size:13px;color:#b9ccb9}
+.hero-next a{padding:6px 0;display:inline-block}
+.hero-simple + .why-intro{padding-top:105px}
+.why-evidence-heading{margin-bottom:45px}.why-evidence-heading .eyebrow{margin-bottom:24px}.why-evidence-heading h2{font-size:clamp(27px,3.2vw,44px);line-height:1.5;letter-spacing:-.025em}.why-evidence-intro{font-size:16px;line-height:1.85;color:var(--muted);margin:19px 0 0}
+@media(min-width:1600px){.hero.hero-simple{display:flex}}
+@media(max-width:700px){.hero.hero-simple{display:block;min-height:0;padding:calc(var(--header) + 60px) 0 111px}.hero-simple h1{font-size:clamp(34px,8.7vw,55px);line-height:1.35;letter-spacing:-.045em}.hero-summary{margin-top:25px}.hero-simple-promise{font-size:17px;margin-bottom:17px}.hero-simple-description{font-size:16px;line-height:1.85}.hero-simple-actions{gap:19px;margin-top:28px}.hero-simple-actions .button{font-size:14px;padding:13px 22px;min-height:50px}.hero-simple-link{font-size:13px}.hero-simple>.hero-next{bottom:24px;padding-top:13px;font-size:12px}.hero-simple + .why-intro{padding-top:74px}.why-evidence-heading h2{font-size:28px}.why-evidence-intro{font-size:15px}.why-evidence-heading{margin-bottom:32px}}

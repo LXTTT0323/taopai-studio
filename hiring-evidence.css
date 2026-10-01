@@ -1,0 +1,29 @@
+.why-section-label{font-size:13px;color:var(--muted);margin:0 0 30px;letter-spacing:.08em}
+.why-evidence-heading{margin-bottom:30px}
+.why-evidence-heading .eyebrow{margin-bottom:16px}
+.why-evidence-heading h2{font-size:clamp(28px,3.2vw,44px);line-height:1.4;margin:0}
+.why-evidence-intro{font-size:16px;line-height:1.85;margin:16px 0 0;max-width:780px}
+.hero-simple + .why-intro{padding-top:76px;padding-bottom:70px}
+.hiring-evidence{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.hiring-row{min-width:0;border-top:1px solid #bdcabb;padding:25px 0 0;display:flex;flex-direction:column}
+.hiring-company{display:block;font-family:Arial,sans-serif;font-size:27px;line-height:1.2;letter-spacing:-.035em;font-weight:650}
+.hiring-category{display:block;font-size:12px;color:var(--muted);margin-top:7px}
+.hiring-role h4{font-size:14px;font-weight:400;margin:9px 0 0;color:#506759}
+.hiring-job-name,.hiring-eligibility{font-size:13px;line-height:1.8;color:var(--muted);margin:12px 0}
+.hiring-source{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;font-size:13px;border-bottom:1px solid #9fab96;padding:6px 0;line-height:1.7;margin-top:15px}
+.hiring-source:hover{color:#9c482e}
+.hiring-source:focus-visible{outline:2px solid #9c482e;outline-offset:5px}
+.hiring-requirement{min-width:0;margin-top:21px;display:flex;flex-direction:column;flex:1}
+.hiring-requirement h4{font-size:21px;line-height:1.55;font-weight:600;letter-spacing:-.02em;margin:0 0 14px}
+.hiring-requirement blockquote{margin:0;padding:18px 20px;background:#e9eedf;border-left:2px solid #9daf69;font-family:Arial,sans-serif;font-size:18px;line-height:1.6;color:#203f33;overflow-wrap:break-word;flex:1}
+.hiring-requirement mark{background:#d9ed98;color:inherit;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:2px 1px}
+.hiring-proof{margin-top:15px}
+.hiring-proof summary{font-size:13px;color:#52694e;cursor:pointer;min-height:36px;list-style-position:inside;width:fit-content;padding:6px 0}
+.hiring-proof summary:focus-visible{outline:2px solid #9c482e;outline-offset:4px}
+.hiring-proof[open] summary{margin-bottom:10px}
+.hiring-proof .source-shot{margin:15px 0 0;background:#fff;border:1px solid #e1e5df;padding:18px 12px;border-radius:6px}
+.hiring-proof .source-shot img{border:0;border-radius:0;width:100%;height:auto}
+.hiring-proof .source-shot figcaption{font-size:12px;margin-top:12px;line-height:1.8}
+.hiring-footnote{font-size:12px;line-height:1.9;color:var(--muted);margin:18px 0 0;max-width:1000px}
+.image-viewer{width:min(1400px,96vw)}.image-viewer img{min-height:0!important;max-height:65vh;object-fit:contain}.image-viewer p{margin-bottom:0}
+@media(max-width:700px){.hero-simple + .why-intro{padding-top:60px;padding-bottom:55px}.why-evidence-heading h2{font-size:28px}.why-evidence-intro{font-size:15px}.hiring-evidence{grid-template-columns:1fr;gap:25px}.hiring-row{padding-top:22px}.hiring-requirement{margin-top:18px}.hiring-requirement h4{font-size:20px}.hiring-requirement blockquote{font-size:17px;padding:16px 18px}.why-section-label{margin-bottom:25px}}
