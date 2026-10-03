@@ -1,4 +1,5 @@
 .why-section-label{font-size:13px;color:var(--muted);margin:0 0 30px;letter-spacing:.08em}
+.form-honeypot{display:none!important}.form-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}.form-note a{text-decoration:underline;text-underline-offset:3px}
 .why-evidence-heading{margin-bottom:30px}
 .why-evidence-heading .eyebrow{margin-bottom:16px}
 .why-evidence-heading h2{font-size:clamp(28px,3.2vw,44px);line-height:1.4;margin:0}

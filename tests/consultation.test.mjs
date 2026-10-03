@@ -1,0 +1,39 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+const source = readFileSync(new URL('../consultation.js', import.meta.url), 'utf8');
+const moduleUrl = 'data:text/javascript;base64,' + Buffer.from(source).toString('base64');
+const { getFormAction, initializeConsultation } = await import(moduleUrl);
+
+test('unverified recipient is never enabled', () => {
+  assert.equal(getFormAction('a'.repeat(32), false), null);
+});
+test('only opaque form identifiers are accepted', () => {
+  for (const value of ['', 'hello@example.com', '../other-endpoint', 'https://formsubmit.co/anything', '<script>', null]) {
+    assert.equal(getFormAction(value, true), null);
+  }
+  assert.equal(getFormAction('a'.repeat(32), true), 'https://formsubmit.co/' + 'a'.repeat(32));
+});
+test('pending setup disables submission without sending data', () => {
+  const button = { disabled: false };
+  let submit;
+  const form = { querySelector: () => button, addEventListener: (event, handler) => { submit = handler; } };
+  initializeConsultation({ getElementById: id => id === 'consult-form' ? form : { textContent: '' } });
+  assert.equal(button.disabled, true);
+  let prevented = false;
+  submit({ preventDefault: () => { prevented = true; } });
+  assert.equal(prevented, true);
+});
+test('public website no longer contains email links or recipient identifiers', () => {
+  for (const path of ['../index.html', '../app.js', '../consultation.js', '../thank-you.html']) {
+    const text = readFileSync(new URL(path, import.meta.url), 'utf8');
+    assert.doesNotMatch(text, /mailto:|@gmail\.com/);
+  }
+});
+test('form keeps spam protection and private fields out of query parameters', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /id="consult-form" method="POST"/);
+  assert.match(html, /name="_honey"/);
+  assert.doesNotMatch(html, /name="_captcha" value="false"/);
+  assert.doesNotMatch(html, /id="generated"/);
+});
