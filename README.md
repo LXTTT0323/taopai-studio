@@ -62,9 +62,11 @@ npx wrangler pages deploy release --project-name taopai-studio --branch main
 
 也可以在 Cloudflare Pages 控制台直接上传该发布目录。不要上传整个工作区、`.git`、本地配置或密钥；不要把 API 密钥或登录凭据写入任何网页文件。
 
-## 咨询收件配置（当前待验证）
+## 咨询收件配置（已启用）
 
 不在前端或仓库保存收件邮箱。表单采用 FormSubmit 提供的随机表单编号，而不是邮箱形式的地址。
+
+2026-10-03：收件人确认激活，并提供匿名编号验收邮件的收件截图；姓名、阶段、咨询内容、联系方式四项均完整到达收件箱。网站已启用提交。后续邮件仍可能受到收件服务及垃圾邮件过滤影响。
 
 1. 收件人点击 FormSubmit 验证邮件里的 Activate Form。
 2. 将服务提供的随机表单编号填入 `consultation.js` 的 `FORM_ID`。不要填收件邮箱、激活链接或 API 密钥。

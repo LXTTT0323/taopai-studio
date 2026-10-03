@@ -1,19 +1,19 @@
 // Use only the invisible form ID issued after recipient activation.
 // Never put a recipient email address, API key or activation URL in this file.
-export const FORM_ID = "";
-export const FORM_VERIFIED = false;
+export const FORM_ID = "3bcb1b5275790f0c6a9ecbd3e53c2511";
+export const FORM_VERIFIED = true;
 
 export function getFormAction(id, verified) {
   if (!verified || typeof id !== "string" || !/^[a-zA-Z0-9_-]{16,128}$/.test(id)) return null;
   return "https://formsubmit.co/" + id;
 }
 
-export function initializeConsultation(doc) {
+export function initializeConsultation(doc, config = { id: FORM_ID, verified: FORM_VERIFIED }) {
   const form = doc.getElementById("consult-form");
   if (!form) return;
   const button = form.querySelector('button[type="submit"]');
   const status = doc.getElementById("consult-status");
-  const action = getFormAction(FORM_ID, FORM_VERIFIED);
+  const action = getFormAction(config.id, config.verified);
   if (!action) {
     button.disabled = true;
     form.addEventListener("submit", event => event.preventDefault());
