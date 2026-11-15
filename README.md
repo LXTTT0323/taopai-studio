@@ -13,13 +13,16 @@
 | `index.html` | 页面文案、区块、导航、导师名称、预约表单 |
 | `hero-simple.css` | 首页首屏排版与移动端样式 |
 | `hiring-evidence.css` | Amazon / Google 招聘案例的横向布局 |
+| `cases.css` | 学员作品区块（一句话 + 作品截图） |
 | `style.css` | 全站基础样式、其他区块、导师横向滚动 |
 | `app.js` | 页面与导师滚动效果 |
 | `consultation.js` | 隐藏收件地址的 FormSubmit 接入、表单启用状态 |
 | `thank-you.html` | 提交后的返回页面 |
 | `images/taopai-logo.png` | 工作室标志 |
+| `images/case-*.jpg` | 学员作品截图（卢浮宫、Healthcare Decoder、Buy Now, or Wait?） |
+| `images/logos/*.svg` | 导师背景区的公司 logo |
 
-样式加载顺序为 `style.css` → `hero-simple.css` → `hiring-evidence.css`，后面的规则可覆盖前面的规则。
+样式加载顺序为 `style.css` → `hero-simple.css` → `hiring-evidence.css` → `cases.css`，后面的规则可覆盖前面的规则。
 
 ## 本地预览
 
@@ -50,9 +53,11 @@ py -m http.server 4317 --bind 127.0.0.1
 
 **本仓库尚未配置自动部署。Push 或合并 PR 不会自动更新线上网站。**
 
-由具备 Cloudflare 发布权限的人，将下面八个网站文件复制到单独的发布目录（例如 `release`，保留 `images` 子目录）：
+由具备 Cloudflare 发布权限的人，将下面这些网站文件复制到单独的发布目录（例如 `release`，保留 `images` 及 `images/logos` 子目录）：
 
-`index.html`、`style.css`、`hero-simple.css`、`hiring-evidence.css`、`app.js`、`consultation.js`、`thank-you.html`、`images/taopai-logo.png`。
+`index.html`、`style.css`、`hero-simple.css`、`hiring-evidence.css`、`cases.css`、`app.js`、`consultation.js`、`thank-you.html`、`images/taopai-logo.png`、`images/case-louvre.jpg`、`images/case-healthcare-decoder.jpg`、`images/case-buy-now-or-wait.jpg`，以及 `images/logos/` 下的全部导师背景 logo（SVG）。
+
+每次部署是整站快照：发布目录里缺少的文件，上线后就不存在了。发布前先确认仓库与线上一致。
 
 然后运行：
 
@@ -83,4 +88,5 @@ npx wrangler pages deploy release --project-name taopai-studio --branch main
 - 招聘案例引用原岗位页面，不保证岗位持续开放或获得面试。
 - 导师和机构名称不能被改成未经确认的官方合作或结果承诺。
 - 保留手机端布局，以及系统“减少动态效果”设置的支持。
+- 学员作品只放已征得本人同意的项目；状态（已上线 / 0.5）和链接改动时同步更新。
 - 发布前检查首页、01/02/03 编号、外链、导师滚动和预约邮件流程。
