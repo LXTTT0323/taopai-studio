@@ -62,3 +62,7 @@
 .work-paper mark{background:linear-gradient(transparent 62%,var(--lime) 62%);color:inherit;padding:0 1px}
 @media(max-width:1000px){.work-cv-full{padding:24px 30px 28px}}
 @media(max-width:700px){.work-cv-full{padding:20px 18px 22px}.work-cv-tag{font-size:14px;margin-bottom:14px}.work-paper{padding:18px 16px 16px}.work-paper-sec{font-size:12px}.work-paper-row strong{font-size:16px}.work-paper-row span{font-size:13.5px}.work-paper-sub{font-size:13px}.work-paper li{font-size:14px;line-height:1.55}}
+.work-paper-row strong i{font-style:normal;font-weight:400;font-size:.86em}
+.work-paper ul{list-style:none;padding-left:0}
+.work-paper li{position:relative;padding-left:18px}
+.work-paper li:before{content:"•";position:absolute;left:3px;top:0}
