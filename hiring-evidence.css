@@ -28,3 +28,14 @@
 .hiring-footnote{font-size:12px;line-height:1.9;color:var(--muted);margin:18px 0 0;max-width:1000px}
 .image-viewer{width:min(1400px,96vw)}.image-viewer img{min-height:0!important;max-height:65vh;object-fit:contain}.image-viewer p{margin-bottom:0}
 @media(max-width:700px){.hero-simple + .why-intro{padding-top:60px;padding-bottom:55px}.why-evidence-heading h2{font-size:28px}.why-evidence-intro{font-size:15px}.hiring-evidence{grid-template-columns:1fr;gap:25px}.hiring-row{padding-top:22px}.hiring-requirement{margin-top:18px}.hiring-requirement h4{font-size:20px}.hiring-requirement blockquote{font-size:17px;padding:16px 18px}.why-section-label{margin-bottom:25px}}
+.hiring-voice{margin-top:34px;padding:30px 32px;background:#fffefa;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:.42fr 1fr;gap:40px;align-items:start}
+.hiring-voice-label{margin:0 0 14px;font-size:12px;letter-spacing:.1em;color:#8d4026;font-weight:650}
+.hiring-voice-who strong{display:block;font-family:Arial,sans-serif;font-size:25px;line-height:1.25;letter-spacing:-.03em;font-weight:650}
+.hiring-voice-who span{display:block;margin-top:8px;font-size:13px;line-height:1.7;color:var(--muted)}
+.hiring-voice-what{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.hiring-voice-what h4{font-size:23px;line-height:1.5;font-weight:600;letter-spacing:-.02em;margin:0 0 12px}
+.hiring-voice-what p{margin:0;font-size:16px;line-height:1.85;color:#3f574e;max-width:720px}
+.hiring-voice-what blockquote{margin:18px 0 0;padding:16px 20px;background:#e9eedf;border-left:2px solid #9daf69;font-family:Arial,sans-serif;font-size:18px;line-height:1.6;color:#203f33;align-self:stretch}
+.hiring-voice-what mark{background:#d9ed98;color:inherit;padding:2px 1px}
+.hiring-voice-what .hiring-voice-note{margin-top:16px;font-size:13px;line-height:1.8;color:var(--muted)}
+@media(max-width:700px){.hiring-voice{grid-template-columns:1fr;gap:20px;padding:24px 20px;margin-top:26px;border-radius:14px}.hiring-voice-who strong{font-size:23px}.hiring-voice-what h4{font-size:20px}.hiring-voice-what p{font-size:15px}.hiring-voice-what blockquote{font-size:17px;padding:14px 16px}}
