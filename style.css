@@ -64,3 +64,18 @@
 .consult-take .consult-take-note{margin-top:12px;font-size:14px;font-weight:400;color:#d3ddd3}
 @media(max-width:1000px){.deliver-list{grid-template-columns:1fr}.deliver-bottom{grid-template-columns:1fr}}
 @media(max-width:700px){.deliver-heading{grid-template-columns:1fr;gap:22px;margin-bottom:36px}.deliver-intro{font-size:16px}.deliver-list{gap:16px}.deliver-list li{padding:26px 22px 24px;border-radius:16px}.deliver-no{font-size:32px}.deliver-list h3{font-size:21px;margin-top:16px}.deliver-bottom{gap:16px;margin-top:16px}.deliver-how{padding:28px 22px;border-radius:16px}.deliver-how h3{font-size:21px}.deliver-doc{padding:20px 16px 22px;border-radius:16px}.deliver-doc-paper{padding:18px 14px}.deliver-doc table{font-size:13px}.deliver-doc th,.deliver-doc td{padding:7px 8px}.consult-take{padding:20px 18px;margin:24px 0}}
+
+/* 你会拿到什么：改成五行清单 */
+.deliver-heading{display:block;margin-bottom:44px}
+.deliver-main{display:grid;grid-template-columns:6fr 5fr;gap:26px;align-items:start}
+.deliver-rows{list-style:none;margin:0;padding:6px 32px;background:#fffefa;border:1px solid var(--line);border-radius:20px}
+.deliver-rows li{display:grid;grid-template-columns:58px 1fr;gap:6px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line)}
+.deliver-rows li:first-child{border-top:0}
+.deliver-rows .deliver-no{font-size:30px}
+.deliver-rows h3{font-size:21px;line-height:1.4;margin:0 0 4px;letter-spacing:-.01em}
+.deliver-rows p{margin:0;font-size:15.5px;line-height:1.75;color:#3f574e}
+.deliver-rows .work-resume{margin-left:10px;white-space:nowrap}
+.deliver-pace{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.deliver-pace li{padding:9px 18px;border-radius:99px;background:var(--green);color:var(--paper);font-size:14.5px;line-height:1.5}
+@media(max-width:1000px){.deliver-main{grid-template-columns:1fr}}
+@media(max-width:700px){.deliver-heading{margin-bottom:30px}.deliver-main{gap:16px}.deliver-rows{padding:4px 20px;border-radius:16px}.deliver-rows li{grid-template-columns:44px 1fr;padding:18px 0}.deliver-rows .deliver-no{font-size:25px}.deliver-rows h3{font-size:19px}.deliver-rows p{font-size:15px}.deliver-rows .work-resume{display:inline-block;margin:6px 0 0}.deliver-pace{margin-top:18px;gap:8px}.deliver-pace li{font-size:13.5px;padding:8px 14px}}

@@ -45,3 +45,20 @@
 .work-cv{margin:18px 0 0!important;padding:12px 14px;border-left:3px solid var(--lime);background:#f4f6ec;border-radius:0 8px 8px 0;font-size:13.5px!important;line-height:1.6!important;color:#1d201a!important}
 .work-cv span{display:block;margin-bottom:4px;font-size:11.5px;letter-spacing:.08em;color:#8d4026;font-weight:650}
 .work-cv em{font-style:normal;font-family:Georgia,"Times New Roman",serif}
+
+/* 首页卡片下方的完整简历段落 */
+.work-cv-full{grid-column:1/-1;background:#eef1e4;border-top:1px solid var(--line);padding:28px 44px 34px}
+.work-cv-tag{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 16px;font-size:14.5px;color:#3f574e}
+.work-cv-tag span{padding:4px 13px;border-radius:30px;background:var(--green);color:#fff;font-size:12px;font-weight:650;letter-spacing:.08em}
+.work-paper{max-width:860px;background:#fff;border:1px solid #d5dbcc;border-radius:6px;padding:26px 30px 24px;box-shadow:0 10px 26px #163f3512;font-family:Georgia,"Times New Roman",Times,serif;color:#1d201a;overflow-wrap:anywhere}
+.work-paper-sec{margin:0 0 10px;padding-bottom:5px;border-bottom:1px solid #1d201a;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.work-paper-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 16px;line-height:1.4}
+.work-paper-row strong{font-size:17.5px}
+.work-paper-row span{font-size:14.5px;font-style:italic;white-space:nowrap}
+.work-paper-sub{margin:3px 0 0;font-size:14px;line-height:1.5;font-style:italic;color:#4d5249}
+.work-paper ul{margin:10px 0 0;padding-left:18px;list-style:disc}
+.work-paper li{margin:0 0 7px;font-size:15px;line-height:1.6}
+.work-paper li:last-child{margin-bottom:0}
+.work-paper mark{background:linear-gradient(transparent 62%,var(--lime) 62%);color:inherit;padding:0 1px}
+@media(max-width:1000px){.work-cv-full{padding:24px 30px 28px}}
+@media(max-width:700px){.work-cv-full{padding:20px 18px 22px}.work-cv-tag{font-size:14px;margin-bottom:14px}.work-paper{padding:18px 16px 16px}.work-paper-sec{font-size:12px}.work-paper-row strong{font-size:16px}.work-paper-row span{font-size:13.5px}.work-paper-sub{font-size:13px}.work-paper li{font-size:14px;line-height:1.55}}
