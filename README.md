@@ -13,7 +13,9 @@
 | `index.html` | 页面文案、区块、导航、导师名称、预约表单 |
 | `hero-simple.css` | 首页首屏排版与移动端样式 |
 | `hiring-evidence.css` | Amazon / Google 招聘案例的横向布局 |
-| `cases.css` | 学员作品区块（一句话 + 作品截图） |
+| `cases.css` | 学员作品区块（一句话 + 作品截图），以及通往画廊的入口 |
+| `gallery/index.html` | 作品画廊子页面（/gallery/）：学员作品、每个作品的「写进简历」段落、创始人作品 |
+| `gallery/gallery.css` | 画廊子页面的样式，先写手机，900px 以上展开成两栏 |
 | `style.css` | 全站基础样式、其他区块、导师横向滚动 |
 | `app.js` | 页面与导师滚动效果 |
 | `consultation.js` | 隐藏收件地址的 FormSubmit 接入、表单启用状态 |
@@ -55,7 +57,7 @@ py -m http.server 4317 --bind 127.0.0.1
 
 由具备 Cloudflare 发布权限的人，将下面这些网站文件复制到单独的发布目录（例如 `release`，保留 `images` 及 `images/logos` 子目录）：
 
-`index.html`、`style.css`、`hero-simple.css`、`hiring-evidence.css`、`cases.css`、`app.js`、`consultation.js`、`thank-you.html`、`images/taopai-logo.png`、`images/case-louvre.jpg`、`images/case-healthcare-decoder.jpg`、`images/case-buy-now-or-wait.jpg`，以及 `images/logos/` 下的全部导师背景 logo（SVG）。
+`index.html`、`style.css`、`hero-simple.css`、`hiring-evidence.css`、`cases.css`、`app.js`、`consultation.js`、`thank-you.html`、`gallery/index.html`、`gallery/gallery.css`、`images/taopai-logo.png`、`images/case-louvre.jpg`、`images/case-healthcare-decoder.jpg`、`images/case-buy-now-or-wait.jpg`，以及 `images/logos/` 下的全部导师背景 logo（SVG）。
 
 每次部署是整站快照：发布目录里缺少的文件，上线后就不存在了。发布前先确认仓库与线上一致。
 
