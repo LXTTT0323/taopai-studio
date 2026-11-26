@@ -17,3 +17,13 @@
 @media(max-width:700px){.mentor-companies .ecosystem-yc{width:190px}.logo-img{transform:scale(.78)}}
 @media(prefers-reduced-motion:reduce){.mentor-companies li.logo-item{min-width:170px}}
 .is-animated .mentor-track{animation-duration:150s}@media(max-width:700px){.is-animated .mentor-track{animation-duration:120s}}
+
+/* 服务卡 02：从 0 到 1 的六步 */
+.build-steps{grid-column:2/-1;list-style:none;margin:0;padding:26px 0 0;border-top:1px solid #fff3;display:grid;grid-template-columns:repeat(3,1fr);gap:22px 34px;counter-reset:build}
+.build-steps li{counter-increment:build;position:relative;padding-left:34px;min-width:0}
+.build-steps li:before{content:counter(build);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;border:1px solid var(--lime);color:var(--lime);font:italic 13px/20px Georgia,serif;text-align:center}
+.build-steps strong{display:block;font-size:16px;font-weight:650;line-height:1.5}
+.build-steps span{display:block;margin-top:3px;font-size:13.5px;line-height:1.7;color:#d3ddd3}
+.service-mvp .service-content p{margin-bottom:0}
+@media(max-width:1000px){.build-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.build-steps{grid-column:1;grid-template-columns:1fr;gap:15px;padding-top:20px;margin-top:4px}.build-steps strong{font-size:15.5px}.build-steps span{font-size:13.5px}}

@@ -31,3 +31,12 @@
 .works-more a:hover{color:#a65037;border-color:#a65037}
 @media(max-width:1000px){.work-text{padding:34px 30px 32px}.work-shot{min-height:360px}}
 @media(max-width:700px){.works-heading{grid-template-columns:1fr;gap:22px;margin-bottom:40px}.works-intro{font-size:16px}.works-list{gap:24px}.work-card{grid-template-columns:1fr;border-radius:18px}.work-text{padding:28px 22px 26px}.work-number{font-size:32px}.work-label{margin-top:18px}.work-meta{padding-top:24px}.work-shot{border-left:0;border-top:1px solid var(--line);min-height:0}.work-shot img{position:static;height:auto;aspect-ratio:16/10}.work-shot.is-contain img{padding:12px}}
+
+/* 通往站内画廊的入口 */
+.work-resume{font-size:14px;font-weight:650;color:#8d4026;border-bottom:1.5px solid #e2a58c;padding-bottom:1px;transition:color .25s,border-color .25s}
+.work-resume:hover{color:var(--green);border-color:var(--green)}
+.works-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 30px;padding:26px 30px;border:1px solid var(--line);border-radius:18px;background:#fffefa}
+.works-more span{max-width:560px;line-height:1.8}
+.works-more a.works-gallery{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:10px 24px;border:0;border-radius:99px;background:var(--green);color:#fff;font-weight:650;transition:background .25s,transform .25s}
+.works-more a.works-gallery:hover{background:#27604d;color:#fff;transform:translateY(-2px)}
+@media(max-width:700px){.works-more{padding:22px;border-radius:14px}.works-more a.works-gallery{width:100%;justify-content:center}}
