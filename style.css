@@ -27,3 +27,40 @@
 .service-mvp .service-content p{margin-bottom:0}
 @media(max-width:1000px){.build-steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.build-steps{grid-column:1;grid-template-columns:1fr;gap:15px;padding-top:20px;margin-top:4px}.build-steps strong{font-size:15.5px}.build-steps span{font-size:13.5px}}
+
+/* 你会拿到什么：三样交付物 + 陪跑方式 + 产品文档节选 */
+.deliver-section{background:#eef1e4;border-top:1px solid var(--line)}
+.deliver-heading{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:end;margin-bottom:60px}
+.deliver-heading h2{font-size:clamp(36px,4.5vw,62px)}
+.deliver-intro{font-size:17px;line-height:1.9;color:var(--muted);margin:0 0 5px}
+.deliver-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.deliver-list li{background:#fffefa;border:1px solid var(--line);border-radius:20px;padding:34px 32px 30px;display:flex;flex-direction:column;align-items:flex-start}
+.deliver-no{font:italic 38px/1 Georgia,serif;color:#be6a4d;letter-spacing:-.04em}
+.deliver-list h3{font-size:23px;line-height:1.4;margin:20px 0 10px;letter-spacing:-.01em}
+.deliver-list li>p{margin:0;font-size:15.5px;line-height:1.85;color:#3f574e}
+.deliver-list .deliver-done{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);width:100%;font-size:14.5px;color:var(--green)}
+.deliver-done b{display:block;margin-bottom:3px;font-size:12px;font-weight:650;letter-spacing:.08em;color:#8d4026}
+.deliver-list .work-resume{margin-top:16px}
+.deliver-bottom{display:grid;grid-template-columns:5fr 6fr;gap:22px;margin-top:22px;align-items:stretch}
+.deliver-how{background:var(--green);color:var(--paper);border-radius:20px;padding:36px 34px}
+.deliver-how h3{font-size:23px;margin:0 0 18px;line-height:1.4}
+.deliver-how ul{list-style:none;margin:0;padding:0}
+.deliver-how li{position:relative;padding:9px 0 9px 22px;border-top:1px solid #fff2;font-size:16px;line-height:1.7}
+.deliver-how li:before{content:"";position:absolute;left:2px;top:1.15em;width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.deliver-how p{margin:18px 0 0;padding-top:16px;border-top:1px solid #fff2;font-size:13.5px;line-height:1.85;color:#d3ddd3}
+.deliver-doc{margin:0;background:#e3e8d6;border:1px solid var(--line);border-radius:20px;padding:26px 28px 30px}
+.deliver-doc figcaption{font-size:12px;letter-spacing:.1em;color:#8d4026;font-weight:650;margin-bottom:14px}
+.deliver-doc-paper{background:#fff;border:1px solid #d5dbcc;border-radius:6px;padding:24px 26px;box-shadow:0 10px 26px #163f3512}
+.deliver-doc-title{margin:0;font-size:17px;font-weight:700;color:#1d201a}
+.deliver-doc-sub{margin:4px 0 14px;font-size:13.5px;color:var(--muted)}
+.deliver-doc table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6;color:#1d201a}
+.deliver-doc th{text-align:left;padding:7px 10px;background:#f1f4e8;border:1px solid #dfe4d6;font-weight:650;width:50%}
+.deliver-doc td{padding:8px 10px;border:1px solid #dfe4d6;vertical-align:top}
+.deliver-doc td:last-child{color:var(--muted)}
+/* 免费咨询能带走什么 */
+.consult-take{margin:30px 0;padding:22px 24px;border:1px solid #fff3;border-radius:14px;background:#ffffff0d}
+.consult-take>p{margin:0;font-size:16px;font-weight:650;color:var(--lime)}
+.consult-take ol{margin:12px 0 0;padding-left:22px;font-size:16px;line-height:1.9;color:var(--paper)}
+.consult-take .consult-take-note{margin-top:12px;font-size:14px;font-weight:400;color:#d3ddd3}
+@media(max-width:1000px){.deliver-list{grid-template-columns:1fr}.deliver-bottom{grid-template-columns:1fr}}
+@media(max-width:700px){.deliver-heading{grid-template-columns:1fr;gap:22px;margin-bottom:36px}.deliver-intro{font-size:16px}.deliver-list{gap:16px}.deliver-list li{padding:26px 22px 24px;border-radius:16px}.deliver-no{font-size:32px}.deliver-list h3{font-size:21px;margin-top:16px}.deliver-bottom{gap:16px;margin-top:16px}.deliver-how{padding:28px 22px;border-radius:16px}.deliver-how h3{font-size:21px}.deliver-doc{padding:20px 16px 22px;border-radius:16px}.deliver-doc-paper{padding:18px 14px}.deliver-doc table{font-size:13px}.deliver-doc th,.deliver-doc td{padding:7px 8px}.consult-take{padding:20px 18px;margin:24px 0}}
