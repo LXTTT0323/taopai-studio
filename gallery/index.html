@@ -262,7 +262,7 @@ body.open{overflow:hidden}
   .d-cta{flex-direction:column;align-items:flex-start;padding:22px 20px}
   .desk-only{display:none}
   .mobile-only{display:block}
-  .qr{width:150px;height:150px;margin:16px auto 10px}
+  .qrimg{width:190px;height:190px}
 }
 
 /* 写进简历 */
@@ -285,6 +285,10 @@ body.open{overflow:hidden}
 .cvpaper li::before{content:"•";position:absolute;left:3px;top:0}
 .cvpaper mark{background:linear-gradient(transparent 62%,var(--lime) 62%);color:inherit;padding:0 1px}
 footer a{color:var(--green);font-weight:700;text-decoration:none}
+.cta-acts{display:flex;gap:10px;flex-wrap:wrap}
+.qrimg{width:220px;height:220px;margin:18px auto 6px;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.mailto{font-size:14px!important;margin-top:14px!important}
+.mailto a{color:var(--green);font-weight:700}
 @media (max-width:760px){
   .cv{padding:0 14px}
   .cv summary{font-size:14px;gap:10px;min-height:52px}
@@ -312,7 +316,7 @@ footer a{color:var(--green);font-weight:700;text-decoration:none}
     <h1 id="h1" aria-label="你的想法，离上线还有几站？"></h1>
     <p>墙上每一个窗口，一开始都只是一句话。点开任意一个，看它怎么做出来。</p>
     <div class="acts">
-      <span class="jumps"><a class="jump" href="#students">学员作品 <i id="n-s"></i> ↓</a><a class="jump" href="#founders">创始人作品 <i id="n-f"></i> ↓</a></span>
+      <span class="jumps"><a class="jump" href="#students">学员作品 <i id="n-s"></i> ↓</a><a class="jump" href="#founders">创始人部分作品 ↓</a></span>
     </div>
   </div>
   <button class="skip" id="skip">跳过开场 →</button>
@@ -328,7 +332,7 @@ footer a{color:var(--green);font-weight:700;text-decoration:none}
 
 <section class="zone f" id="founders">
   <div class="wrap">
-    <div class="zone-h"><div><div class="k">FOUNDERS · 创始人作品</div><h2>带你的人，<br>自己也一直在做。</h2></div><p>Patrick 和 Garrett 用同样的方法，做出了这些已经上线的作品。</p></div>
+    <div class="zone-h"><div><div class="k">FOUNDERS · 创始人部分作品示例</div><h2>带你的人，<br>自己也一直在做。</h2></div><p>Patrick 和 Garrett 用同样的方法做东西。这里是部分作品示例。</p></div>
     <div class="fgrid" id="f-list"></div>
   </div>
 </section>
@@ -336,10 +340,10 @@ footer a{color:var(--green);font-weight:700;text-decoration:none}
 <div class="wrap">
   <section class="cta-band">
     <div><h2>你的那一句话是什么？</h2><p>带着它来聊 30 分钟。哪怕只有一个念头，也可以从这里开始。</p></div>
-    <a class="btn btn-primary" href="../#join">预约免费咨询 →</a>
+    <div class="cta-acts"><a class="btn btn-primary" href="../#join">预约免费咨询 →</a><button class="btn btn-line" data-wx>加创始人微信</button></div>
   </section>
 </div>
-<footer><div class="wrap"><span>桃派工作室 · 从一句话，到一个能打开的作品</span><a href="../">回到官网</a></div></footer>
+<footer><div class="wrap"><span>桃派工作室 · 从一句话，到一个能打开的作品</span><span>联系创始人 <a href="mailto:garrettao2004@gmail.com">garrettao2004@gmail.com</a> · <a href="../">回到官网</a></span></div></footer>
 
 <div class="scrim" id="scrim"></div>
 <aside class="panel" id="panel" aria-hidden="true" role="dialog" aria-modal="true">
@@ -347,6 +351,18 @@ footer a{color:var(--green);font-weight:700;text-decoration:none}
   <div class="panel-in" id="detail"></div>
 </aside>
 
+<div class="modal" id="wx" role="dialog" aria-modal="true" aria-labelledby="wx-h">
+  <div class="sheet">
+    <button class="close" data-close aria-label="关闭">×</button>
+    <h3 id="wx-h">加创始人微信</h3>
+    <p>Garrett · 桃派创始人</p>
+    <img class="qrimg" src="assets/founder-wechat-qr.png" alt="Garrett 的微信二维码" width="240" height="240">
+    <p class="desk-only">用手机微信扫一扫</p>
+    <p class="mobile-only">长按二维码识别，或截图后在微信里扫</p>
+    <div class="hint">添加时备注：<b>你想做的东西</b>，比如「想做机票比价」</div>
+    <p class="mailto">也可以写邮件：<a href="mailto:garrettao2004@gmail.com">garrettao2004@gmail.com</a></p>
+  </div>
+</div>
 <div class="lightbox" id="lb"><img alt=""><span></span></div>
 <div class="toast" id="toast"></div>
 
@@ -400,19 +416,19 @@ const CASES=[
   quote:"别人问我在做什么，我想直接发一个链接。",after:"assets/p-site.jpg",link:"https://patrick-pan-ai-native.vercel.app/",
   trail:{v10:{when:"9 月 22 日 · 上线",text:"首页是一张打印出来的咖啡小票，再签上名字。整个网站用代码做成，没有用设计软件。",link:"https://patrick-pan-ai-native.vercel.app/",mats:[{src:"assets/p-site.jpg",cap:"首页 · 签名之后"}]}},
   roles:{ai:"写全部代码：小票出纸、手写签名、拉花动效，并部署上线。",me:"定内容：四个身份、两个作品。一轮轮看效果给反馈，比如拉花要「逐渐摇摆出花」。"}},
+ {id:"corda",...G,stage:"v10",title:"Corda AI",sub:"投行投资人会议的 AI 排期台",med:"网页应用 · AI 读邮件 · 银行家审批",status:"试点中",live:true,
+  quote:"投资人会议还在靠邮件和表格排，能不能交给 AI？",after:"assets/g-corda.jpg",link:"https://corda-ai-snowy.vercel.app/",
+  trail:{v10:{when:"试点中 · 10+ 位银行家试用过",text:"从 MONEY TALKS 2 黑客松开始做。AI 读投资人的邮件、查时间冲突、排好会议；每一处改动都要银行家点头才生效。",link:"https://corda-ai-snowy.vercel.app/",
+     mats:[{src:"assets/g-corda.jpg",cap:"会议总览：谁在等你确认"},{src:"assets/g-corda-review.jpg",cap:"一封邮件，变成一个待确认的改动"},{src:"assets/g-corda-alloc.jpg",cap:"一键分配银行家和会议室"}]}}},
+ {id:"froodie",...G,stage:"v10",title:"Froodie",sub:"纽约免费吃的实时地图",med:"网页地图 · 每天自动抓取 20+ 来源",status:"Beta",live:true,
+  quote:"今晚纽约哪里有免费的吃的？",after:"assets/g-froodie.jpg",link:"https://froodie.app/",
+  trail:{v10:{when:"Beta · 每天早上更新",text:"黑客松、meetup、校园活动和快闪里管饭的地方，都放在一张地图上。每天早上自动抓取 20 多个来源，再由 AI 核对一遍。",link:"https://froodie.app/",mats:[{src:"assets/g-froodie.jpg",cap:"froodie.app"}]}}},
  {id:"market",...G,stage:"v10",title:"UVA Marketplace",sub:"校园二手、转租和租借",med:"网站 · 拍照 AI 自动上架",status:"每周约 1,400 访问",live:true,
   quote:"拍一张照，东西就能挂出去卖。",after:"assets/g-market.jpg",link:"https://uvamarketplace.com/",
   trail:{v10:{when:"已上线 · 每周约 1,400 访问",text:"一个 UVA 学生的校园市集。拍照发布时，AI 帮你自动写好商品信息。",link:"https://uvamarketplace.com/",mats:[{src:"assets/g-market.jpg",cap:"uvamarketplace.com 首页"}]}}},
  {id:"pawly",...G,stage:"v10",title:"Pawly",sub:"AI 宠物摄像头",med:"网页应用 · 设备端视觉识别",status:"已上线",live:true,
   quote:"家里那台旧手机，能不能变成宠物摄像头？",after:"assets/g-pawly.jpg",link:"https://pawlycam.com/",
-  trail:{v10:{when:"已上线",text:"闲置的手机、平板、电脑都能当宠物摄像头。它跟着宠物看，再总结值得看的片段。",link:"https://pawlycam.com/",mats:[{src:"assets/g-pawly.jpg",cap:"pawlycam.com 首页"}]}}},
- {id:"avalon",...G,stage:"v10",title:"圆桌：赛博阿瓦隆",sub:"3D 赛博酒吧里的线上阿瓦隆",med:"3D 网页 · 语音法官 · AI 机器人补位",status:"可以玩",live:true,
-  quote:"朋友凑不齐，能不能也开一局阿瓦隆？",after:"assets/g-avalon.jpg",link:"https://yuanzhuo-cyber-avalon.vercel.app/",
-  trail:{v10:{when:"已上线 · 可以玩",text:"在一张 3D 的赛博圆桌旁玩阿瓦隆。法官用语音带你们走完每一晚；人不够时，AI 机器人补上空位，会发言、投票，也会说谎。",link:"https://yuanzhuo-cyber-avalon.vercel.app/",mats:[{src:"assets/g-avalon.jpg",cap:"进门：选一个角色，开一桌"}]}}},
- {id:"pegline",...G,stage:"v10",title:"晾晾 Pegline",sub:"屏幕顶上的一根晾衣绳",med:"桌面应用 · Windows / macOS · 免费",status:"可以下载",live:true,
-  quote:"截图一多就找不到，能不能先晾在屏幕上？",after:"assets/g-pegline.jpg",link:"https://lxttt0323.github.io/pegline/",
-  trail:{v10:{when:"已发布 · Windows 和 Mac",text:"截图、复制的文件和文字，自己挂到屏幕顶上的绳子上。要用时按住，拖进聊天、邮件或文件夹。七套皮肤，不联网，不用账号。",link:"https://lxttt0323.github.io/pegline/",
-     mats:[{src:"assets/g-pegline.jpg",cap:"截图挂上绳，直接拖进聊天"},{src:"assets/g-pegline-skin.jpg",cap:"皮肤：白昼和赛博机甲"}]}}}
+  trail:{v10:{when:"已上线",text:"闲置的手机、平板、电脑都能当宠物摄像头。它跟着宠物看，再总结值得看的片段。",link:"https://pawlycam.com/",mats:[{src:"assets/g-pawly.jpg",cap:"pawlycam.com 首页"}]}}}
 ];
 const RESUME={
  louvre:{head:"Creator – Louvre Before You Go",sub:"leslylou0457.github.io/louvre-before-you-go",b:[
@@ -440,7 +456,7 @@ function cmp(c,start){
    <input type="range" min="0" max="100" value="${start}" aria-label="拖动对比：${esc(c.title)}"></div>`;
 }
 const S=CASES.filter(c=>c.who==="s"), F=CASES.filter(c=>c.who==="f");
-document.getElementById("n-s").textContent=S.length; document.getElementById("n-f").textContent=F.length;
+document.getElementById("n-s").textContent=S.length;
 document.getElementById("s-list").innerHTML=S.map((c,i)=>`<article class="ex">
   <div class="lab"><div class="no">${String(i+1).padStart(2,"0")}</div><h3>${esc(c.title)}</h3>
    <div class="med">${esc(c.med)}</div><div class="st"><span class="chip ${c.live?"live":"wip"}">${esc(c.status)}</span></div>
@@ -471,7 +487,7 @@ document.querySelectorAll(".cmp").forEach(el=>io.observe(el));
 
 /* hero wall: type a sentence, press Enter, it becomes a window; three times, then the whole wall */
 const hero=document.getElementById("hero"), wall=document.getElementById("wall"), typer=document.getElementById("typer"), typed=document.getElementById("typed"), enterKey=document.getElementById("enter");
-const WALL_ORDER=["louvre","poemway","flight","pmthot","market","decoder","pawly","site","avalon","pegline"];
+const WALL_ORDER=["louvre","poemway","flight","pmthot","corda","decoder","froodie","site","market","pawly"];
 const INTRO=[["louvre",62],["poemway",34],["flight",20]];
 /* [left %, top %, width vw, rotate deg] — desktop keeps the centre clear for the headline, phone uses top and bottom bands */
 const SLOT_D=[[3,9,16,-5],[23,5,12,3],[64,6,12.8,-3],[81,13,15.3,6],[2,45,13.5,4],[83,47,13.9,-4],[6,72,16.3,3],[27,77,12.5,-4],[61,78,13.2,5],[80,74,15.6,-6],[44,3,10.4,2]];
@@ -575,7 +591,7 @@ function detail(c){
    <section class="sec"><h2>一路的轨迹</h2><ol class="trail">${trail}</ol></section>
    ${RESUME[c.id]?`<section class="sec"><h2>写进简历</h2>${paper(c.id)}</section>`:""}
    ${roles?`<section class="sec"><h2>谁做了什么</h2>${roles}</section>`:""}
-   <div class="d-cta"><div><b>你的想法，也可以从一句话开始</b><p>带着它来聊 30 分钟，免费。</p></div><a class="btn btn-primary" href="../#join">预约免费咨询 →</a></div>`;
+   <div class="d-cta"><div><b>你的想法，也可以从一句话开始</b><p>带着它来聊 30 分钟，免费。</p></div><span class="cta-acts"><a class="btn btn-primary" href="../#join">预约免费咨询 →</a><button class="btn btn-line" data-wx>加创始人微信</button></span></div>`;
 }
 const body=document.body, panel=document.getElementById("panel");
 let lastFocus=null;
@@ -595,12 +611,15 @@ document.addEventListener("click",e=>{
   const o=e.target.closest("[data-open]"); if(o){lastFocus=o;openCase(o.dataset.open);return;}
   const mat=e.target.closest(".mat[data-src]"); if(mat){const lb=document.getElementById("lb");lb.querySelector("img").src=mat.dataset.src;lb.querySelector("span").textContent=mat.dataset.cap;lb.classList.add("on");return;}
   if(e.target.closest("#lb")){document.getElementById("lb").classList.remove("on");return;}
+  if(e.target.closest("[data-wx]")){document.getElementById("wx").classList.add("on");return;}
+  if(e.target.closest("[data-close]")||e.target.id==="wx"){document.getElementById("wx").classList.remove("on");return;}
   if(e.target.id==="back"||e.target.id==="scrim") closeCase();
 });
 document.addEventListener("keydown",e=>{
   if(e.key!=="Escape") return;
-  const lb=document.getElementById("lb");
+  const lb=document.getElementById("lb"), wx=document.getElementById("wx");
   if(lb.classList.contains("on")) lb.classList.remove("on");
+  else if(wx.classList.contains("on")) wx.classList.remove("on");
   else if(body.classList.contains("open")) closeCase();
 });
 window.addEventListener("popstate",()=>{const id=location.hash.slice(1); CASES.some(c=>c.id===id)?openCase(id,false):closeCase(false);});
