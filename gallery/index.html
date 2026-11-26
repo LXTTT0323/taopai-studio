@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>作品画廊｜桃派工作室</title><meta name="description" content="桃派工作室的学员作品和创始人作品。每个作品从一句话开始，看它怎么做出来，也看它怎么写进简历。"><link rel="icon" type="image/png" href="../images/taopai-logo.png"><link rel="stylesheet" href="../style.css?v=20261126"><link rel="stylesheet" href="../cases.css?v=20261126"><link rel="stylesheet" href="./gallery.css?v=20261126"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>作品画廊｜桃派工作室</title><meta name="description" content="桃派工作室的学员作品和创始人作品。每个作品从一句话开始，看它怎么做出来，也看它怎么写进简历。"><link rel="icon" type="image/png" href="../images/taopai-logo.png"><link rel="stylesheet" href="../style.css?v=20261126b"><link rel="stylesheet" href="../cases.css?v=20261126b"><link rel="stylesheet" href="./gallery.css?v=20261126b"></head>
 <body class="gallery-page">
 <a class="skip-link" href="#students">跳到作品</a>
 <header class="site-header"><a class="brand" href="../" aria-label="回到桃派工作室官网"><img src="../images/taopai-logo.png" alt="" width="42" height="42"><span>桃派<span class="brand-small">工作室</span></span></a><nav aria-label="画廊导航"><a href="#students">学员作品</a><a href="#founders">创始人作品</a></nav><a class="g-back" href="../"><span aria-hidden="true">←</span> 回到官网</a></header>
@@ -49,12 +49,12 @@
 <div class="g-work-head"><div class="g-work-no"><span>03</span><em class="work-status is-progress">0.5 · 做出三页网页</em></div><span class="work-label">一句话</span><p class="work-quote">「现在买会不会买贵？继续等会不会涨价？」</p></div>
 <figure class="work-shot is-contain g-shot"><div class="work-shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>buy-now-or-wait</span></div><img src="../images/case-buy-now-or-wait.jpg" alt="Buy Now, or Wait? 的票价走势图：一个出发日的报价对比历史中位数" width="714" height="531" loading="lazy"></figure>
 <div class="g-work-meta"><h3>Buy Now, or Wait?</h3><p>数据分析 + 网页 · 真实票价数据</p><p>大二 · 数学</p></div>
-<details class="g-how"><summary>它是怎么做出来的</summary><ol><li>第一版是他自己做出来的，用的是一份公开的 2022 年历史票价数据。</li><li>现在是 0.5 版：三页网页。图上能看到一个出发日的报价，和同类报价比是高还是低。</li><li>我们看完后，给了一份 0.5 版的修改建议。</li></ol></details>
+<details class="g-how"><summary>它是怎么做出来的</summary><ol><li>第一版是他自己做出来的，用的是一份公开的 2022 年历史票价数据。</li><li>现在是 0.5 版：三页网页，针对 JFK–LAX 一条航线。输入今天看到的价格，它给 1 到 5 星，并且每天自动记录新的报价。</li><li>我们看完后，给了一份 0.5 版的修改建议。</li></ol></details>
 </div>
 <div class="g-resume"><div class="g-resume-head"><span class="g-resume-tag">写进简历</span><p>这个项目，在简历上是这样一段。</p></div>
 <div class="g-resume-grid">
-<div class="g-paper" lang="en"><p class="g-paper-sec">Projects</p><div class="g-paper-row"><strong>Buy Now, or Wait?</strong><span>Fall 2026</span></div><p class="g-paper-sub">Solo project · Data analysis and a three-page website</p><ul><li><mark>Analyzed historical 2022 Expedia fare quotes</mark> (public Kaggle dataset, CC BY 4.0) to show how prices move in the 60 days before departure.</li><li><mark>Built a three-page site</mark> that plots one departure date against the median and the middle 50% of comparable quotes, so a traveler can see whether a price is high or low.</li><li><mark>Stated the limits on the page</mark>: only documented fare-code matches are included, missing dates stay blank, and results are labeled as historical, not a forecast.</li></ul></div>
-<div class="g-notes"><p>这一段突出了什么</p><ul><li>数据从哪来写得清清楚楚，谁都能去核对。</li><li>写了方法：拿一个出发日，和同类报价的中位数、中间 50% 比。</li><li>主动写局限。说「这是历史数据，不是预测」，比夸大更让人信。</li></ul></div>
+<div class="g-paper" lang="en"><p class="g-paper-sec">Projects</p><div class="g-paper-row"><strong>Buy Now, or Wait?</strong><span>Fall 2026</span></div><p class="g-paper-sub">Solo project · Python (pandas), Next.js, GitHub Actions · JFK–LAX nonstop economy fares</p><ul><li><mark>Built a three-page fare reference</mark> for JFK–LAX nonstop one-way economy tickets that rates a price from 1 to 5 stars against same-platform history.</li><li><mark>Automated daily collection of real fare quotes</mark> with GitHub Actions, and used 2022 Expedia quotes (public Kaggle dataset, CC BY 4.0) to chart how prices move before departure.</li><li><mark>Stated the limits on the page</mark>: a rating needs at least 10 independent reference days, thin samples are flagged, and results are labeled as historical, not a forecast.</li></ul></div>
+<div class="g-notes"><p>这一段突出了什么</p><ul><li>路线写得具体（JFK–LAX），一看就知道做的范围有多大。</li><li>每天自动采集真实报价，说明这不是一次性的作业。</li><li>主动写局限。说「这是历史数据，不是预测」，比夸大更让人信。</li></ul></div>
 </div></div>
 </article>
 
