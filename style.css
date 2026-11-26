@@ -79,3 +79,4 @@
 .deliver-pace li{padding:9px 18px;border-radius:99px;background:var(--green);color:var(--paper);font-size:14.5px;line-height:1.5}
 @media(max-width:1000px){.deliver-main{grid-template-columns:1fr}}
 @media(max-width:700px){.deliver-heading{margin-bottom:30px}.deliver-main{gap:16px}.deliver-rows{padding:4px 20px;border-radius:16px}.deliver-rows li{grid-template-columns:44px 1fr;padding:18px 0}.deliver-rows .deliver-no{font-size:25px}.deliver-rows h3{font-size:19px}.deliver-rows p{font-size:15px}.deliver-rows .work-resume{display:inline-block;margin:6px 0 0}.deliver-pace{margin-top:18px;gap:8px}.deliver-pace li{font-size:13.5px;padding:8px 14px}}
+
